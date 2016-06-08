@@ -203,4 +203,57 @@
 							 "10"
 							 "000111"]
   }
+ {
+  :name "sparse zero sandwich - any number of 1s with utmost one zero"
+  :type "nfa"
+  :tuple {
+     				 :states #{:q1 :q2}
+     				 :alphabets #{0 1}
+     				 :delta {:q1 {:e #{:q2} 0 #{:q2} 1 {:q1}}
+         						 :q2 {1 #{:q2}}
+         						}
+     				 :start-state :q1
+     				 :final-states #{:q2}
+     				 }
+  :pass-cases ["1"
+							 "11"
+            	"101"
+            	"110"
+            	"01"
+            	"011"
+               "1111"]
+  :fail-cases ["00"
+               "010"
+               "100"
+               "110011"
+               "1010"]
+  }
+ {
+  :name "any number of zeroes followed by any number of ones"
+  :type "nfa"
+  :tuple {
+     				 :states #{:q1 :q2}
+     				 :alphabets #{0 1}
+     				 :delta {:q1 {:e #{:q2} 0 #{:q1}}
+           					 :q2 {1 #{:q2}}
+            				}
+     				 :start-state :q1
+     				 :final-states #{:q2}
+     				 }
+  :pass-cases [""
+               "0"
+               "1"
+               "00"
+               "001"
+               "0011"
+               "0001"
+               "011"
+               "000111"]
+  :fail-cases ["10"
+               "1110"
+               "010"
+               "10101"
+               "1101"]
+  }
+
  ]
