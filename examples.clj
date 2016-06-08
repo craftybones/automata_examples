@@ -209,7 +209,7 @@
   :tuple {
      				 :states #{:q1 :q2}
      				 :alphabets #{0 1}
-     				 :delta {:q1 {:e #{:q2} 0 #{:q2} 1 {:q1}}
+     				 :delta {:q1 {:e #{:q2} 0 #{:q2} 1 #{:q1}}
          						 :q2 {1 #{:q2}}
          						}
      				 :start-state :q1
