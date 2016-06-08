@@ -26,7 +26,7 @@
   :tuple {
           :states #{:q1 :q2}
           :alphabets #{0 1}
-          :delta {:q1 {1 :q2 0 :q1} :q2 {1 :q1 0 :q2}}
+          :delta {:q1 {0 :q2 1 :q1} :q2 {0 :q1 1 :q2}}
           :start-state :q1
           :final-states #{:q1}
           }
@@ -94,7 +94,7 @@
                   :q2 {0 :q3 1 :q3}
                   :q3 {0 :q1 1 :q1}}
           :start-state :q1
-          :final-states #{:q3}
+          :final-states #{:q1}
           }
   :pass-cases ["000"
                "111"
