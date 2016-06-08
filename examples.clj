@@ -3,7 +3,7 @@
   :type "dfa"
   :tuple {
           :states #{:q1 :q2}
-          :alphabets #{0 1}
+          :alphabets #{"0" "1"}
           :delta {:q1 {0 :q2 1 :q1} :q2 {0 :q1 1 :q2}}
           :start-state :q1
           :final-states #{:q2}
@@ -25,7 +25,7 @@
   :type "dfa"
   :tuple {
           :states #{:q1 :q2}
-          :alphabets #{0 1}
+          :alphabets #{"0" "1"}
           :delta {:q1 {0 :q2 1 :q1} :q2 {0 :q1 1 :q2}}
           :start-state :q1
           :final-states #{:q1}
@@ -47,7 +47,7 @@
   :type "dfa"
   :tuple {
           :states #{:q1 :q2}
-          :alphabets #{0 1}
+          :alphabets #{"0" "1"}
           :delta {:q1 {0 :q2 1 :q1} :q2 {0 :q2 1 :q2}}
           :start-state :q1
           :final-states #{:q2}
@@ -68,7 +68,7 @@
   :type "dfa"
   :tuple {
           :states #{:q1 :q2}
-          :alphabets #{0 1}
+          :alphabets #{"0" "1"}
           :delta {:q1 {1 :q2 0 :q1} :q2 {0 :q2 1 :q2}}
           :start-state :q1
           :final-states #{:q2}
@@ -89,7 +89,7 @@
   :type "dfa"
   :tuple {
           :states #{:q1 :q2 :q3}
-          :alphabets #{0 1}
+          :alphabets #{"0" "1"}
           :delta {:q1 {0 :q2 1 :q2}
                   :q2 {0 :q3 1 :q3}
                   :q3 {0 :q1 1 :q1}}
@@ -118,7 +118,7 @@
   :type "dfa"
   :tuple {
           :states #{:q1 :q2 :q3 :q4}
-          :alphabets #{0 1}
+          :alphabets #{"0" "1"}
           :delta {:q1 {0 :q2 1 :q4}
                   :q2 {0 :q4 1 :q3}
                   :q3 {0 :q2 1 :q4}
@@ -146,7 +146,7 @@
   :type "nfa"
   :tuple {
           :states #{:q1 :q2 :q3 :q4 :q5 :q6 :q7}
-          :alphabets #{0 1}
+          :alphabets #{"0" "1"}
           :delta {:q1 {:e #{:q2 :q5}}
                   :q2 {0 #{:q3}}
                   :q3 {1 #{:q4}}
@@ -178,7 +178,7 @@
   :type "nfa"
   :tuple {
      				 :states #{:q1 :q2 :q3 :q4 :q5}
-     				 :alphabets #{0 1}
+     				 :alphabets #{"0" "1"}
      				 :delta {:q1 {:e #{:q2 :q4}}
          								 :q2 {0 #{:q3} 1 #{:q2}}
          								 :q3 {0 #{:q2} 1 #{:q3}}
@@ -208,7 +208,7 @@
   :type "nfa"
   :tuple {
      				 :states #{:q1 :q2}
-     				 :alphabets #{0 1}
+     				 :alphabets #{"0" "1"}
      				 :delta {:q1 {:e #{:q2} 0 #{:q2} 1 #{:q1}}
          						 :q2 {1 #{:q2}}
          						}
@@ -233,7 +233,7 @@
   :type "nfa"
   :tuple {
      				 :states #{:q1 :q2}
-     				 :alphabets #{0 1}
+     				 :alphabets #{"0" "1"}
      				 :delta {:q1 {:e #{:q2} 0 #{:q1}}
            					 :q2 {1 #{:q2}}
             				}
