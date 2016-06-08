@@ -3,4 +3,8 @@
 
 (defn -main
   []
-  (->> "examples.clj" slurp read-string generate-string (spit "examples.json")))
+  (-> "examples.clj" 
+       slurp
+       read-string
+       generate-string
+       (generate-stream (clojure.java.io/writer "examples.json"))))

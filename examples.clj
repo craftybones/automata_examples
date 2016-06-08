@@ -141,6 +141,37 @@
                "0100"
                "011"]
   }
-
+ {
+  :name "alternate characters beginning and ending with same letter"
+  :type "nfa"
+  :tuple {
+          :states #{:q1 :q2 :q3 :q4 :q5 :q6 :q7}
+          :alphabets #{0 1}
+          :delta {:q1 {:e #{:q2 :q5}}
+                  :q2 {0 #{:q3}}
+                  :q3 {1 #{:q4}}
+                  :q4 {0 #{:q3}}
+                  :q5 {1 #{:q6}}
+                  :q6 {0 #{:q7}}
+                  :q7 {1 #{:q6}}
+                  }
+          :start-state :q1
+          :final-states #{:q3 :q6}
+          }
+  :pass-cases ["0"
+               "010"
+               "01010"
+               "1"
+               "101"
+               "10101"]
+  :fail-cases [""
+               "10"
+               "01"
+               "11"
+               "00"
+               "001"
+               "100"
+               "1100"]
+  }
 
  ]
