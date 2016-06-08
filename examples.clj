@@ -173,5 +173,35 @@
                "100"
                "1100"]
   }
-
+ {
+  :name "either even number of zeroes or even number of ones"
+  :type "nfa"
+  :tuple {
+     				 :states #{:q1 :q2 :q3 :q4 :q5}
+     				 :alphabets #{0 1}
+     				 :delta {:q1 {:e #{:q2 :q4}}
+         								 :q2 {0 #{:q3} 1 #{:q2}}
+         								 :q3 {0 #{:q2} 1 #{:q3}}
+         								 :q4 {1 #{:q5} 0 #{:q4}}
+         								 :q5 {1 #{:q4} 0 #{:q5}}
+         								 }
+     				 :start-state :q1
+     				 :final-states #{:q2 :q4}
+     				 }
+  :pass-cases ["00"
+        			 "0000"
+        			 "0101010"
+        			 "00010"
+        			 "11"
+        			 "1111"
+               "110101"
+               "10101010"]
+  :fail-cases ["0"
+        			 "000"
+        			 "111"
+        			 "111000"
+							 "01"
+							 "10"
+							 "000111"]
+  }
  ]
