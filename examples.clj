@@ -268,7 +268,7 @@
                   :q5 {0 #{:q5}}
                   }
           :start-state :q1
-          :final-states #{:q2}
+          :final-states #{:q3 :q5}
           }
   :pass-cases [""
                "0"
